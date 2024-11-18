@@ -1,0 +1,262 @@
+/* Importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset some basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Updated font */
+}
+
+/* Body */
+body {
+  background-color: #f9f8f7; /* Light cream */
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #fff;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600; /* Updated for Poppins */
+  color: #333;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 400; /* Medium weight */
+  position: relative;
+  padding: 5px;
+}
+
+.navigation a:hover {
+  color: #0077b6; /* Subtle blue */
+}
+
+.navigation a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #0077b6;
+  transition: width 0.3s;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url('box1.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Change text color for better contrast */
+  border-radius: 10px;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay for text readability */
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.hero-section * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600; /* Poppins weight */
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  font-weight: 300; /* Light weight */
+}
+
+.hero-section button {
+  background-color: #ffafcc; /* Soft pink */
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400; /* Medium weight */
+  transition: background-color 0.3s;
+}
+
+.hero-section button:hover {
+  background-color: #f48fb1; /* Darker pink */
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 20px;
+  background-color: #fefefe;
+  border-radius: 10px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600; /* Bold for titles */
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #666;
+  font-weight: 300; /* Light weight */
+}
+
+/* Subscription Tiers Section */
+.tier-section {
+  padding: 60px 20px;
+  background-color: #fff0f5; /* Light pastel pink */
+  border-radius: 10px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.tier-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600; /* Bold */
+}
+
+.tier-section .tier-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.tier-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.tier-card:hover {
+  transform: translateY(-5px);
+}
+
+.tier-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600; /* Bold */
+}
+
+.tier-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: 300; /* Light weight */
+}
+
+.tier-card button {
+  background-color: #ffafcc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400; /* Medium */
+  transition: background-color 0.3s;
+}
+
+.tier-card button:hover {
+  background-color: #f48fb1;
+}
+
+/* Footer */
+.footer {
+  background-color: #f9f8f7;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #e0e0e0;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 300; /* Light */
+}
+
+.footer a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 600; /* Medium-bold */
+}
+
+.footer a:hover {
+  color: #f48fb1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tier-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
